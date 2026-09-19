@@ -2,6 +2,7 @@
   margin: 0 auto;
   max-width: 1440px;
   scroll-behavior: smooth;
+  outline: 1px solid #403F3D;*/
 }
 body{
   background-color: #E1D4C9;
@@ -161,10 +162,8 @@ h1 span {
   color: #B0907A;
 }
 .hero-text {
-
 width: 530px;
 height: 72px;
-
 font-family: 'Inter';
 font-style: normal;
 font-weight: 400;
@@ -190,6 +189,9 @@ font-size: 16px;
 line-height: 24px;
 text-align: center;
 color: #403F3D;
+}
+.menu-button:hover{
+background-color: #C1B6AD
 }
 .favorite-coffee{
 margin: 20px auto 80px auto;
@@ -245,6 +247,12 @@ width: 60px;
 height: 60px;
 cursor: pointer;
 }
+
+.button-right:hover,
+.button-left:hover {
+background-color: #C1B6AD
+}
+
 h3 {
 font-size: 24px;
 line-height: 125%;
@@ -281,30 +289,45 @@ display: block;
 margin-bottom: 100px;
 }
 .container-mobile-app{
-  max-width: 1440px;
-  width: 100%;
-  padding: 0 40px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 40px;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 0 40px;
+width: 100%;
+height: auto;
+max-width: 1360px;
+min-height: 630px;
+gap: 40px;
 }
-.text-mobile{
-  font-size: 16px;
-  font-style: normal;
-  text-align: justify;
+.mobile-content{
+display: flex;
+flex-direction: column;
+padding: 0px;
+gap: 40px;
+width: 630px;
+height: 342px;
+font-size: 16px;
+font-style: normal;
+text-align: justify;
 }
-.app-links,{
+
+}
+.app-links {
 display: flex;
 flex-direction: row;
 justify-content: flex-start;
 gap: 20px;
-width: 100%
+width: 100%;
 margin-left: 0;
-margin-right: auto
+margin-right: auto;
+border: 1px solid #B0907A;
+border-radius: 100px;
+}
+.app-links a{
+display: inline-flex;
 align-items: center;
+text-decoration: none;
 }
 .mobile-left{
 display: flex;
@@ -312,12 +335,43 @@ flex-direction: column;
 align-items: flex-start;
 gap: 40px;
 }
+.app-links{
+margin: 10px;
+display: flex;
+flex-direction: row;
+}
 .app-store,
 .google-play {
-font-family: 'Inter';
-font-style: normal;
-font-weight: 600;
-font-size: 16px;
-line-height: 24px;
+display: flex;
+flex-direction: row;
+padding: 12px 20px;
+gap: 8px;
+border: 1px solid #B0907A;
+border-radius: 100px;
 background: transparent;
+cursor: pointer;
+width: 200px;
+height: 64px;
+}
+.app-links p{
+font-family: 'Inter';
+font-size: 16px;
+font-style: inherit;
+text-align:center;
+}
+.app-links a:hover {
+background-color: #C1B6AD
+}
+.mobile-pic{
+  object-fit: cover;
+}
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  padding: 0 40px;
+  background-color: #B0907A;
+  border-radius: 40px;
 }
