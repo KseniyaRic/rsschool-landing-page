@@ -1,440 +1,68 @@
 * {
-  margin: 0 auto;
-  max-width: 1440px;
+  box-sizing: border-box;
   scroll-behavior: smooth;
 }
-body{
-  background-color: #E1D4C9;
-  font-family: 'Inter', sans-serif;
-  color: #403F3d;
-}
-  a, a:visited {
-  color: inherit;
-  text-decoration: none;
-}
-
+/*делает прокрутку невидимой*/
 html ::-webkit-scrollbar {
   display: none;
 }
-.header-container{
+html, body {
+  margin: 0;
+  padding: 0;
   width: 100%;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  background-color: #E1D4C9;
+  font-family: 'Inter', sans-serif;
+  color: #403F3d;
+
+}
+  img {
+  max-width: 100%;
+  height: auto;
   display: block;
-}
-.header-inner {
-max-width: 1440px;
-margin: 0 auto;
-padding: 20px 40px;
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: center;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-}
-.logo img{
-  display: block;
-}
-.menu_list {
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: center;
-gap: 40px;
-}
-
-.menu_link {
-text-decoration: none;
-}
-.menu_link:hover{
-  color: #B0907A;
-}
-
-.header-actions{
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: center;
-padding: 0px;
-gap: 20px;
-width: auto;
-height: auto;
-}
-.theme-switch{
-  display: inline-flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  border: 1px solid #C1B6AD;
-  background: transparent;
-  border-radius: 100px;
-  padding: 8px 16px;
-  cursor: pointer;
-}
-.theme-switch img {
-  display: block;
-}
-.moon {
-gap: 20px;
-}
-.header-actions .menu {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  text-decoration: none;
-  cursor: pointer;
-}
-  .menu img {
-  display: block;
-}
-
-.hero {
-  margin: 20px auto 80px auto;
-  display: block;
-  position: relative;
-  max-width: 1440px;
-  width: 100%;
-  min-height: 644px;
-  overflow: hidden;
-}
-.video-container{
-position: relative;
-display: flex;
-flex-direction: column;
-align-items: center;
-padding: 0px;
-gap: 40px;
-width: 1360px;
-max-width: 1360px;
-height: 799px;
-overflow: hidden;
-border-radius: 40px;
-}
-.background-video{
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-object-fit: cover;
-z-index: 1;
-border-radius: 40px;
-}
-/*Контейнер для контента поверх видео */
-.container-hero {
-  width: 100%;
-  position: relative;
-  height: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 0 100px;
-  box-sizing: border-box;
-}
-.hero-content{
-  margin-left: 0 !important;
-  max-width: 530px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 40px;
-}
-
-h1 {
-width: 530px;
-height: 228px;
-font-family: 'Inter';
-font-style: normal;
-font-weight: 600;
-font-size: 72px;
-line-height: 76px;
-color: #E1D4C9;
-}
-h1 span {
-  font-style: italic;
-  color: #B0907A;
-}
-.hero-text {
-width: 530px;
-height: 72px;
-font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 24px;
-color: #E1D4C9;
-}
-.menu-button {
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 20px 78px;
-gap: 8px;
-width: 200px;
-height: 64px;
-background: #E1D4C9;
-border-radius: 100px;
-width: 44px;
-height: 24px;
-font-weight: 600;
-font-size: 16px;
-line-height: 24px;
-text-align: center;
-color: #403F3D;
-}
-.menu-button:hover{
-background-color: #C1B6AD
-}
-#favorite-coffee{
-margin: 20px auto 80px auto;
-display: flex;
-flex-direction: column;
-align-items: center;
-padding: 40px 40px;
-width: 1440px;
-height: auto;
-}
-h2 {
-  margin-bottom: 20px;
-  font-size: 60px;
-  color: #403F3D;
-  text-align: center;
-}
-h2 span {
-  font-style: italic;
-  color: #B0907A;
-}
-
-.slider-container{
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: space-between;
-width: 100%;
-}
-
-.slide-1{
-display: flex;
-flex-direction: column;
-align-items: center;
-padding: 0px;
-gap: 20px;
-width: 480px;
-max-width: 480px;
-height: auto;
-margin-bottom: 20px;
-overflow: hidden;
-}
-.button-left,
-.button-right {
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 0px;
-border: 1px solid #665F55;
-border-radius: 100px;
-background: transparent;
-width: 60px;
-height: 60px;
-cursor: pointer;
-}
-
-.button-right:hover,
-.button-left:hover {
-background-color: #C1B6AD
-}
-
-h3 {
-font-size: 24px;
-line-height: 125%;
-text-align: center;
-}
-.text-comment{
-  font-size: 16px;
-  line-height: 150%;
-  text-align: center;
-}
-#about {
-  margin: 40px auto 80px auto;
-}
-.container-about {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 40px;
-width: 100%;
-}
-img {
-border-radius: 40px;
-object-fit: cover;
-}
-.left-column,
-.right-column{
-display: flex;
-flex-direction: column;
-gap: 40px;
-width: 100%
-}
-#mobile-app {
-width: 100%;
-display: block;
-margin-bottom: 100px;
-}
-.container-mobile-app{
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: center;
-padding: 0 40px;
-width: 100%;
-height: auto;
-max-width: 1360px;
-min-height: 630px;
-gap: 40px;
-}
-.mobile-content{
-display: flex;
-flex-direction: column;
-padding: 0px;
-gap: 40px;
-width: 630px;
-height: 342px;
-font-size: 16px;
-font-style: normal;
-text-align: justify;
-}
-.app-links {
-display: flex;
-flex-direction: row;
-justify-content: flex-start;
-gap: 20px;
-width: 100%;
-margin-left: 0;
-margin-right: auto;
-}
-.app-links a{
-display: inline-flex;
-align-items: center;
-text-decoration: none;
-}
-.mobile-left{
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-gap: 40px;
-}
-.app-links{
-display: flex;
-flex-direction: row;
-overflow: hidden;
-gap: 20px;
-}
-.app-store,
-.google-play {
-display: flex;
-flex-direction: row;
-padding: 12px 20px;
-gap: 8px;
-border: 1px solid #B0907A;
-border-radius: 100px;
-background: transparent;
-cursor: pointer;
-width: 200px;
-height: 64px;
-overflow: hidden;
-}
-.app-links p{
-font-family: 'Inter';
-font-size: 16px;
-font-style: inherit;
-text-align:center;
-}
-.app-links a:hover {
-background-color: #C1B6AD
-}
-.mobile-pic{
   object-fit: cover;
-}
-footer{
-width: 1440px;
-height: 450px;
-}
-.footer-container {
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-width: auto;
-max-width: 1360px;
-height: 450px;
-background: #665F55;
-border-radius: 40px;
-}
-.footer-left{
-display: flex;
-flex-direction: column;
-justify-content: flex-start;
-align-items: flex-start;
-gap: 20px;
-width: auto;
-max-width: 530px;
-height: auto;
-}
-.footer-heading {
-font-family: 'Inter';
-font-style: normal;
-text-align: left;
-font-weight: 600;
-font-size: 60px;
-line-height: 75px;
-color: #E1D4C9;
-}
-.footer-heading span {
-display: block;
-font-style: italic;
-color: #B0907A;
-}
-.social-media{
-display: flex;
-flex-direction: row;
-justify-content: flex-start;
-align-items: center;
-padding: 0px;
-gap: 12px;
-width: auto;
-height: 60px;
-
-}
-.social-media a{
-text-decoration: none;
-}
-.social-media a:hover {
-background-color: #C1B6AD
-}
-h4 {
-font-family: 'Inter';
-font-style: normal;
-font-weight: 600;
-font-size: 24px;
-line-height: 125%;
-color: #E1D4C9;
-}
-.contacts {
-display: flex;
-flex-direction: column;
-justify-self: flex-start;
-align-items: flex-start;
-font-family: 'Inter';
-font-style: normal;
-font-weight: 600;
-font-size: 16px;
-text-align: start;
-color: #E1D4C9;
+  }
+  /* Этот класс ты будешь добавлять внутрь каждой секции (внутри <header>, <main>, <section>) */
+.container {
+  max-width: 1440px; /* Контент никогда не станет шире макета */
+  width: 100%;
+  margin-left: auto;  /* Эти две строчки центрируют контент */
+  margin-right: auto; /* если экран монитора больше 1440px */
+  padding-left: 40px;  /* Боковые отступы-предохранители, чтобы на 1440px */
+  padding-right: 40px; /* текст не прижимался вплотную к краям экрана */
 }
 
+
+
+
+
+
+/*@media (max-width: 768px) {
+  .container {
+    padding-left: 20px;  /* Уменьшаем отступы по бокам, чтобы освободить место
+    padding-right: 20px;
+  }
+
+  Скрываем основную навигацию
+  main-nav {
+    display: none !important;
+  }
+
+  /* Показываем кнопку бургер-меню
+  burger-button {
+    display: block;
+  }
+
+  /* Пример скрытия декоративных элементов (если это обосновано дизайном)
+  decorative-mint-leaf {
+    display: none;
+  }
+}/* Стили по умолчанию (для десктопа от 1440px и промежуточных вариантов)
+main-nav {
+  display: flex; /* Твоё обычное меню со ссылками
+}
+
+burger-button {
+  display: none; /* На десктопе кнопка-бургер полностью скрыта
+}*/

@@ -11,15 +11,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header-container">
-        <div class="header-inner">
-        <div class="logo">
-              <a href="#">
-                    <img src="logo.svg" alt="coffee logo" width="100" height="60">
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                    <img src="logo.svg" alt="Coffee House Logo">
                 </a>
-                </div>
-                <nav>
-                    <ul class="menu_list" style="list-style-type:none">
+                <nav class="main-nav">
+                    <ul class="menu_list">
                         <li class="menu_name">
                             <a class="menu_link" href="index.html#favorite-coffee">
                             Favorite coffee
@@ -43,16 +41,18 @@
                         </ul>
                 </nav>
                 <div class="header-actions">
-                    <div class="theme-status">
-                        <button class="theme-switch" aria-label="theme-switch">
+                    <button class="button-switch" aria-label="theme-switch">
                             <img src="Light.svg" alt="light-version">
-                            <img class="moon" src="Moon.svg" alt="dark-version">
+                            <img src="Moon.svg" alt="dark-version">
                         </button>
-                    </div>
-                        <a href="#menu" class="menu">
+                        <a href="menu.html" class="right-menu">
                             <span>Menu</span>
                             <img src="coffee-cup.svg" alt="menu coffee cup">
                         </a>
+                        <button class="burger-button" aria-label="Open menu">
+                            <span class="burger-line"></span>
+                            <span class="burger-line"></span>
+                        </button>
                         </div>
                         </div>
                     </header>
