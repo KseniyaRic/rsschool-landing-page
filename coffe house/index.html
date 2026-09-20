@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <title>Coffee House</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Cutive+Mono&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="header">
@@ -17,30 +16,34 @@
                     <img src="logo.svg" alt="Coffee House Logo">
                 </a>
                 <nav class="main-nav">
-                    <ul class="menu_list">
-                        <li class="menu_name">
-                            <a class="menu_link" href="index.html#favorite-coffee">
+                    <ul class="menu-list">
+                        <li class="menu-name">
+                            <a class="menu-link" href="index.html#favorite-coffee">
                             Favorite coffee
                             </a>
                         </li>
-                        <li class="menu_name">
-                            <a class="menu_link" href="index.html#about">
+                        <li class="menu-name">
+                            <a class="menu-link" href="index.html#about">
                             About
                             </a>
                         </li>
-                        <li class="menu_name">
-                            <a class="menu_link" href="#index.html#mobile-app">
+                        <li class="menu-name">
+                            <a class="menu-link" href="index.html#mobile-app">
                             Mobile app
                             </a>
                         </li>
-                        <li class="menu_name">
-                            <a class="menu_link" href="#index.html#contact-us">
+                        <li class="menu-name">
+                            <a class="menu-link" href="index.html#contact-us">
                             Contact us
                             </a>
                         </li>
                         </ul>
                 </nav>
                 <div class="header-actions">
+                    <button class="burger-button" aria-label="Open menu">
+                            <span class="burger-line"></span>
+                            <span class="burger-line"></span>
+                        </button>
                     <button class="button-switch" aria-label="theme-switch">
                             <img src="Light.svg" alt="light-version">
                             <img src="Moon.svg" alt="dark-version">
@@ -49,29 +52,24 @@
                             <span>Menu</span>
                             <img src="coffee-cup.svg" alt="menu coffee cup">
                         </a>
-                        <button class="burger-button" aria-label="Open menu">
-                            <span class="burger-line"></span>
-                            <span class="burger-line"></span>
-                        </button>
                         </div>
                         </div>
                     </header>
                     <main>
                 <section class="hero">
-                    <div class="video-container">
-                    <video class="background-video" autoplay muted loop playsinline>
+                    <div class="container hero-container">
+                    <video class="hero-video" autoplay muted loop playsinline>
                         <source src="video.mp4" type="video/mp4">
                     </video>
-                    <div class="container-hero">
-                        <div class="hero-content">
-                    <h1 class="hero-title"><span>Enjoy</span> premium coffee at our charming cafe</h1>
+                    <div class="hero-content">
+                    <h1><span>Enjoy</span> premium coffee at our charming cafe</h1>
                     <p class="hero-text">With its inviting atmosphere and delicious coffee options, the Coffee House Resource is a popular destination for coffee lovers and those seeking a warm and inviting space to enjoy their favorite beverage.</p>
-                    <a href="#menu" class="menu-button">Menu</a>
-                       </div>
+                    <a href="menu.html" class="hero-button">Menu</a>
                        </div>
                     </div>
                 </section>
             <section id="favorite-coffee">
+                <div class="container favCoffee-container">
                 <h2>Choose your <span>favorite</span> coffee</h2>
                     <div class="slider-container">
                         <button class="button-left" aria-label="Back">
@@ -87,41 +85,40 @@
                             <img src="arrow-right.svg" alt="right-button">
                         </button>
                          </div>
+                         </div>
             </section>
             <section id="about">
+                <div class="container about-container">
                 <h2>Resource is <span>the perfect and cozy place</span> where you can enjoy a variety of hot beverages, relax, catch up with friends, or get some work done.</h2>
-                <div class="container-about">
+                <div class="columns">
                 <div class="left-column">
-                        <img src="about-1.jpg" alt="girl" width="660" height="590" >
-                        <img src="about-2.jpg" alt="coffee" width="660" height="430" >
+                        <img src="about-1.jpg" alt="girl">
+                        <img src="about-2.jpg" alt="coffee">
                     </div>
                     <div class="right-column">
-                        <img src="about-3.jpg" alt="men" width="660" height="430">
-                        <img src="about-4.jpg" alt="couple" width="660" height="590">
+                        <img src="about-3.jpg" alt="men">
+                        <img src="about-4.jpg" alt="couple">
                     </div>
                     </div>
+                </div>
             </section>
             <section id="mobile-app">
-                <div class="container-mobile-app">
+                <div class="container mobile-container">
                     <div class="mobile-content">
                     <div class="mobile-text">
                         <h2><span>Download</span> our app to start ordering</h2>
                         <p>Download the Resource app today and experience the comfort of ordering your favorite coffee from wherever you are</p>
                         </div>
-                        <div class="app-links">
+                        <div class="app-buttons">
                             <a href="https://www.apple.com/app-store/" class="app-store" aria-label="App store" target="_blank" rel="noopener noreferrer">
                                 <img src="Icon-apple.svg" alt="app store">
-                            <div>
-                                    <p>Available on the</p>
-                                    <p>App Store</p>
-                                </div>
+                                    <p>Available on the</p><br>
+                                    <strong>App Store</strong>
                             </a>
                             <a href="https://play.google.com/store/games?device=windows" class="google-play" aria-label="Google play" target="_blank" rel="noopener noreferrer">
                                 <img src="Icon-google.svg" alt="google play">
-                            <div>
-                                <p>Available on</p>
-                                <p>Google Play</p>
-                                </div>
+                                <p>Available on</p><br>
+                                <strong>Google Play</strong>
                             </a>
                         </div>
                         </div>
@@ -132,7 +129,7 @@
             </section>
         </main>
         <footer id="contact-us">
-            <div class="footer-container">
+            <div class="container footer-container">
                 <div class="footer-left">
                     <h3 class="footer-heading">Sip, Savor, Smile.<span>It’s coffee time!</span></h3>
                 <div class="social-media"><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
