@@ -1,0 +1,284 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+html ::-webkit-scrollbar {
+  display: none;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  background-color: #E1D4C9;
+  font-family: 'Inter', sans-serif;
+  color: #403F3d;
+}
+  img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+.hero-container{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+align-self: stretch;
+border-radius: 40px;
+position: relative;
+}
+.hero-video{
+width: 100%;
+height: auto;
+position: relative;
+gap: 40px;
+overflow: hidden;
+border-radius: 40px;
+z-index: 1;
+}
+.hero-content{
+display: flex;
+width: 530px;
+height: auto;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+position: absolute;
+z-index: 2;
+padding: 20px;
+}
+h1 {
+font-size: 72px;
+color: #E1D4C9;
+font-weight: 600;
+line-height: 105%;
+}
+h1 span{
+  font-style: italic;
+  color: #B0907A;
+}
+.hero-text{
+font-size: 16px;
+font-weight: 400;
+color: #E1D4C9;
+}
+.hero-button {
+display: flex;
+box-sizing: border-box;
+width: 200px;
+padding: 20px 78px;
+justify-content: center;
+align-items: center;
+gap: 8px;
+border-radius: 100px;
+background: #E1D4C9;
+font-size: 16px;
+font-weight: 600;
+line-height: 150%;
+text-decoration: none;
+color: #403f3d;
+}
+.hero-button:hover{
+background-color: #C1B6AD
+}
+.favCoffee-container{
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 40px 40px;
+max-width: 1360px;
+height: auto;
+margin: 0 auto;
+}
+h2 {
+  font-size: 60px;
+  color: #403F3D;
+  text-align: center;
+}
+h2 span {
+  font-style: italic;
+  color: #B0907A;
+}
+.slider-container{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+width: 100%;
+}
+.slide-1{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding: 0px;
+gap: 20px;
+width: 480px;
+max-width: 480px;
+height: auto;
+margin-bottom: 20px;
+overflow: hidden;
+text-align: center;
+}
+.button-left,
+.button-right {
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+border: 1px solid #665F55;
+border-radius: 100px;
+background: transparent;
+width: 60px;
+height: 60px;
+cursor: pointer;
+}
+.button-right:hover,
+.button-left:hover {
+background-color: #C1B6AD
+}
+.about-container{
+text-align: center;
+}
+.columns {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 40px;
+width: 100%;
+}
+.columns img{
+width: 100%;
+border-radius: 40px;
+}
+.left-column img:first-child { height: 590px; }
+.left-column img:last-child  { height: 430px; }
+.right-column img:first-child { height: 430px; }
+.right-column img:last-child  { height: 590px; }
+
+.left-column,
+.right-column {
+display: flex;
+flex-direction: column;
+gap: 40px;
+}
+.mobile-container {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 0 40px;
+width: 100%;
+height: auto;
+gap: 40px;
+margin-top: 100px;
+margin-bottom: 100px;
+}
+.mobile-content{
+display: flex;
+flex-direction: column;
+padding: 0px;
+gap: 40px;
+font-size: 16px;
+font-style: normal;
+text-align: justify;
+}
+.app-tab img{
+width: 36px;
+height: 36px;
+object-fit: contain;
+}
+.tab-icon {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 32px;
+height: 32px;
+}
+.app-tab {
+display: flex;
+justify-content: flex-start;
+align-items: center;
+gap: 20px;
+width: 100%;
+margin-top: 40px;
+margin-bottom: 40px;
+}
+.app-button {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+gap: 8px;
+padding: 12px 20px;
+width: 200px;
+height: 64px;
+background-color: transparent;
+border: 1px solid #665F55;
+text-decoration: none;
+border-radius: 100px;
+cursor: pointer;
+}
+.app-name{
+color: #403F3D;
+text-align: center;
+font-size: 14px;
+font-weight: 600;
+}
+.app-name:hover {
+color: #B0907A;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*@media (max-width: 768px) {
+  .container {
+    padding-left: 20px;  /* Уменьшаем отступы по бокам, чтобы освободить место
+    padding-right: 20px;
+  }
+
+  Скрываем основную навигацию
+  main-nav {
+    display: none !important;
+  }
+
+  /* Показываем кнопку бургер-меню
+  burger-button {
+    display: block;
+  }
+
+  /* Пример скрытия декоративных элементов (если это обосновано дизайном)
+  decorative-mint-leaf {
+    display: none;
+  }
+}/* Стили по умолчанию (для десктопа от 1440px и промежуточных вариантов)
+main-nav {
+  display: flex; /* Твоё обычное меню со ссылками
+}
+
+burger-button {
+  display: none; /* На десктопе кнопка-бургер полностью скрыта
+}*
