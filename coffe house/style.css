@@ -1,9 +1,7 @@
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  /*outline: 1px solid #403F3D;
 }
-/*делает прокрутку невидимой*/
 html ::-webkit-scrollbar {
   display: none;
 }
@@ -188,33 +186,6 @@ font-size: 16px;
 font-style: normal;
 text-align: justify;
 }
-/*.app-links {
-display: flex;
-flex-direction: row;
-justify-content: flex-start;
-}
-.app-links a{
-display: inline-flex;
-align-items: center;
-text-decoration: none;
-}
-.app-store,
-.google-play {
-box-sizing: border-box;
-display: flex;
-flex-direction: row;
-gap: 10px;
-align-items: center;
-text-align: center;
-text-decoration: none;
-border-radius: 100px;
-border: 1px solid #B0907A;
-margin-left: 10px;
-}
-.mobile-pic{
-object-fit: cover;
-}*/
-
 .app-tab img{
 width: 36px;
 height: 36px;
@@ -249,13 +220,15 @@ border: 1px solid #665F55;
 text-decoration: none;
 border-radius: 100px;
 cursor: pointer;
-
 }
 .app-name{
 color: #403F3D;
 text-align: center;
 font-size: 14px;
 font-weight: 600;
+}
+.app-name:hover {
+color: #B0907A;
 }
 
 
