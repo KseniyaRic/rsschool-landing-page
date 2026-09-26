@@ -107,34 +107,58 @@
                 </div>
         </section>
         <section id="favorite-coffee">
-            <div class="container favCoffee-container">
+            <div class="slider-wrapper">
                 <h2>Choose your <span>favorite</span> coffee</h2>
-                <div class="slider-container">
+                <div class="container slider-container">
                     <button class="button-left" aria-label="Back">
-                        <img src="arrow-left.svg" alt="left button">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.5 12H6M12 18L6 12L12 6" stroke="#403F3D" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+
                     </button>
-                    <div class="slide-1"><img src="coffee-slider-1.svg" alt="Coffee 1">
-                        <h3>S’mores Frappuccino</h3>
-                        <p class="text-comment">This new drink takes an espresso and mixes it with brown sugar and
-                            cinnamon before being topped with oat milk.</p>
-                        <p class="text-comment">5,50$</p>
+                    <div class="slide-track">
+                        <div class="slide">
+                            <img src="coffee-slider-1.svg" alt="S’mores Frappuccino">
+                            <h3>S’mores Frappuccino</h3>
+                            <p class="text-comment">This new drink takes an espresso and mixes it with brown sugar and
+                                cinnamon before being topped with oat milk.</p>
+                            <p class="price">5,50$</p>
+                        </div>
+                        <div class="slide">
+                            <img src="coffee-slider-2.svg" alt="Caramel Macchiato">
+                            <h3>Caramel Macchiato</h3>
+                            <p class="text-comment">Fragrant and unique classic espresso with rich caramel-peanut syrup,
+                                with cream under whipped thick foam.</p>
+                            <p class="price">5,00$</p>
+                        </div>
+                        <div class="slide">
+                            <img src="coffee-slider-3.svg" alt="Ice coffee">
+                            <h3>Ice coffee</h3>
+                            <p class="text-comment">A popular summer drink that tones and invigorates. Prepared from
+                                coffee, milk and ice.</p>
+                            <p class="price">4,50$</p>
+                        </div>
                     </div>
                     <button class="button-right" aria-label="Next">
-                        <img src="arrow-right.svg" alt="right-button">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 12H18.5M12.5 18L18.5 12L12.5 6" stroke="#403F3D" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+
                     </button>
                 </div>
-            </div>
-            <div class="slider-controls">
-                <div class="controls-item is-active">
-                    <span class="controls-progress"></span>
+                <div class="slider-controls">
+                    <div class="controls-item is-active">
+                        <span class="controls-progress"></span>
+                    </div>
+                    <div class="controls-item">
+                        <span class="controls-progress"></span>
+                    </div>
+                    <div class="controls-item">
+                        <span class="controls-progress"></span>
+                    </div>
                 </div>
-                <div class="controls-item">
-                    <span class="controls-progress"></span>
-                </div>
-                <div class="controls-item">
-                    <span class="controls-progress"></span>
-                </div>
-            </div>
         </section>
         <section id="about">
             <div class="container about-container">
