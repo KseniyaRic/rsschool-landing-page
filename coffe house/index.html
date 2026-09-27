@@ -22,7 +22,7 @@
             <a href="#" class="logo">
                 <img src="logo.svg" alt="Coffee House Logo">
             </a>
-            <nav class="main-nav">
+            <nav class="main-nav" id="mainNav">
                 <ul class="menu-list">
                     <li class="menu-name">
                         <a class="menu-link" href="index.html#favorite-coffee">
@@ -44,6 +44,29 @@
                             Contact us
                         </a>
                     </li>
+                    <li class="menu-name menu-name-mobile">
+                        <a class="menu-link menu-and-cup" href="menu.html">Menu
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M14.167 9.76667V11.6667C14.167 14.8883 11.5553 17.5 8.33366 17.5C5.112 17.5 2.50033 14.8883 2.50033 11.6667V9.76667C2.50033 9.4353 2.76896 9.16667 3.10033 9.16667H13.567C13.8984 9.16667 14.167 9.4353 14.167 9.76667Z"
+                                    stroke="#403F3D" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M10.0003 7.50008C10.0003 6.66675 10.5956 5.83341 11.786 5.83341C13.101 5.83341 14.167 4.76743 14.167 3.45246V2.91675"
+                                    stroke="#403F3D" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M6.66634 7.5V7.08333C6.66634 5.70262 7.78563 4.58333 9.16634 4.58333C10.0868 4.58333 10.833 3.83714 10.833 2.91667V2.5"
+                                    stroke="#403F3D" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M13.333 9.16675H15.4163C16.5669 9.16675 17.4997 10.0995 17.4997 11.2501C17.4997 12.4007 16.5669 13.3334 15.4163 13.3334H14.1663"
+                                    stroke="#403F3D" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </li>
                 </ul>
             </nav>
             <div class="header-actions">
@@ -52,7 +75,7 @@
                     <img src="Moon.svg" alt="dark-version">
                 </button>
                 <div class="menu-item">
-                    <a class="menu-link" href="menu.html">Menu
+                    <a class="menu-link menu-and-cup-end" href="menu.html">Menu
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M14.167 9.76667V11.6667C14.167 14.8883 11.5553 17.5 8.33366 17.5C5.112 17.5 2.50033 14.8883 2.50033 11.6667V9.76667C2.50033 9.4353 2.76896 9.16667 3.10033 9.16667H13.567C13.8984 9.16667 14.167 9.4353 14.167 9.76667Z"
@@ -115,7 +138,6 @@
                             <path d="M18.5 12H6M12 18L6 12L12 6" stroke="#403F3D" stroke-linecap="round"
                                 stroke-linejoin="round" />
                         </svg>
-
                     </button>
                     <div class="slide-track">
                         <div class="slide">
@@ -145,7 +167,6 @@
                             <path d="M6 12H18.5M12.5 18L18.5 12L12.5 6" stroke="#403F3D" stroke-linecap="round"
                                 stroke-linejoin="round" />
                         </svg>
-
                     </button>
                 </div>
                 <div class="slider-controls">
@@ -162,8 +183,8 @@
         </section>
         <section id="about">
             <div class="container about-container">
-                <h2>Resource is <span>the perfect and cozy place</span> where you can enjoy a variety of hot beverages,
-                    relax, catch up with friends, or get some work done.</h2>
+                <h4>Resource is <span>the perfect and cozy place</span> where you can enjoy a variety of hot beverages,
+                    relax, catch up with friends, or get some work done.</h4>
                 <div class="columns">
                     <div class="left-column">
                         <img src="about-1.jpg" alt="girl">
@@ -180,7 +201,7 @@
             <div class="container mobile-container">
                 <div class="mobile-content">
                     <div class="mobile-text">
-                        <h2><span>Download</span> our app to start ordering</h2>
+                        <h4><span>Download</span> our app to start ordering</h4>
                         <p>Download the Resource app today and experience the comfort of ordering your favorite coffee
                             from wherever you are</p>
                     </div>
@@ -188,20 +209,19 @@
                         <a href="https://www.apple.com/app-store/" class="app-button" aria-label="App store"
                             target="_blank" rel="noopener noreferrer">
                             <span class="tab-icon">
-                                <svg width="27" height="32" viewBox="0 0 27 32" fill="none"
+                                <svg width="36" height="36" viewBox="0 0 36 36" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
-                                        d="M22.0578 16.8306C22.021 12.8323 25.4156 10.8871 25.5708 10.7966C23.6483 8.06361 20.6684 7.69021 19.6213 7.66043C17.1185 7.40364 14.6909 9.12057 13.4159 9.12057C12.1156 9.12057 10.1523 7.68524 8.03638 7.72742C5.31352 7.76836 2.76624 9.30541 1.36919 11.6922C-1.51399 16.5589 0.636305 23.7107 3.39861 27.6446C4.7804 29.5711 6.39503 31.7223 8.50843 31.6466C10.576 31.5635 11.3483 30.3614 13.8435 30.3614C16.3157 30.3614 17.0409 31.6466 19.1963 31.5982C21.4153 31.5635 22.8124 29.6629 24.1458 27.719C25.7426 25.5108 26.3839 23.3361 26.4093 23.2245C26.3572 23.2071 22.0998 21.6229 22.0578 16.8306Z"
+                                        d="M26.7063 18.6307C26.6694 14.6324 30.0641 12.6872 30.2193 12.5966C28.2967 9.86366 25.3169 9.49026 24.2697 9.46048C21.767 9.20369 19.3393 10.9206 18.0644 10.9206C16.764 10.9206 14.8008 9.48529 12.6848 9.52747C9.96196 9.56841 7.41468 11.1055 6.01762 13.4923C3.13444 18.359 5.28474 25.5108 8.04705 29.4446C9.42884 31.3712 11.0435 33.5223 13.1569 33.4466C15.2245 33.3635 15.9968 32.1614 18.4919 32.1614C20.9641 32.1614 21.6893 33.4466 23.8447 33.3983C26.0637 33.3635 27.4608 31.463 28.7942 29.519C30.3911 27.3108 31.0323 25.1362 31.0578 25.0245C31.0056 25.0071 26.7483 23.4229 26.7063 18.6307Z"
                                         fill="#403F3D" />
                                     <path
-                                        d="M17.9863 5.07263C19.0983 3.71671 19.8592 1.872 19.648 0C18.0384 0.0694711 16.0256 1.08549 14.8664 2.41164C13.8409 3.58025 12.9248 5.49566 13.1615 7.29695C14.9695 7.42845 16.8259 6.40747 17.9863 5.07263Z"
+                                        d="M22.6347 6.87268C23.7468 5.51675 24.5076 3.67205 24.2964 1.80005C22.6869 1.86952 20.674 2.88554 19.5149 4.21169C18.4893 5.38029 17.5732 7.29571 17.8099 9.097C19.6179 9.2285 21.4743 8.20752 22.6347 6.87268Z"
                                         fill="#403F3D" />
                                 </svg>
-
+                                <span class="app-name">Available on the<br>
+                                    <strong>App Store</strong>
+                                </span>
                             </span>
-                            <p class="app-name">Available on the<br>
-                                <strong>App Store</strong>
-                            </p>
                         </a>
                         <a href="https://play.google.com/store/games?device=windows" class="app-button"
                             aria-label="Google play" target="_blank" rel="noopener noreferrer">
@@ -209,23 +229,22 @@
                                 <svg width="31" height="33" viewBox="0 0 31 33" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
-                                        d="M0.572202 1.40292C0.209755 1.77285 0 2.34879 0 3.09466V29.6994C0 30.4452 0.209755 31.0212 0.572202 31.3911L0.661658 31.4723L15.9523 16.5699V16.2181L0.661658 1.31571L0.572202 1.40292Z"
+                                        d="M0.572202 1.40304C0.209755 1.77297 0 2.34891 0 3.09478V29.6995C0 30.4453 0.209755 31.0213 0.572202 31.3912L0.661658 31.4724L15.9523 16.5701V16.2182L0.661658 1.31582L0.572202 1.40304Z"
                                         fill="#403F3D" />
                                     <path
-                                        d="M22.894 21.5399L17.8027 16.57V16.2181L22.9001 11.2481L23.0143 11.3128L29.0509 14.6617C30.7737 15.6121 30.7737 17.176 29.0509 18.1324L23.0143 21.4753L22.894 21.5399V21.5399Z"
+                                        d="M22.894 21.54L17.8027 16.57V16.2181L22.9001 11.2482L23.0143 11.3128L29.0509 14.6617C30.7737 15.6121 30.7737 17.176 29.0509 18.1324L23.0143 21.4753L22.894 21.54Z"
                                         fill="#403F3D" />
                                     <path
-                                        d="M22.0897 22.4007L16.8781 17.3195L1.49805 32.3166C2.07025 32.903 3.00336 32.9737 4.06448 32.3872L22.0897 22.4007"
+                                        d="M22.0897 22.4008L16.8781 17.3195L1.49805 32.3166C2.07025 32.9031 3.00336 32.9738 4.06448 32.3873L22.0897 22.4008Z"
                                         fill="#403F3D" />
                                     <path
-                                        d="M22.0897 10.3875L4.06448 0.400992C3.00336 -0.179462 2.07025 -0.108787 1.49805 0.477683L16.8781 15.4688L22.0897 10.3875Z"
+                                        d="M22.0897 10.3875L4.06448 0.400985C3.00336 -0.17947 2.07025 -0.108795 1.49805 0.477675L16.8781 15.4688L22.0897 10.3875Z"
                                         fill="#403F3D" />
                                 </svg>
-
+                                <span class="app-name">Available on<br>
+                                    <strong>Google Play</strong>
+                                </span>
                             </span>
-                            <p class="app-name">Available on<br>
-                                <strong>Google Play</strong>
-                            </p>
                         </a>
                     </div>
                 </div>
@@ -235,7 +254,6 @@
             </div>
         </section>
     </main>
-
     <footer id="contact-us">
         <div class="container footer-container">
             <div class="footer-left">

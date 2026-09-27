@@ -83,17 +83,21 @@ display: flex;
 align-items: center;
 gap: 24px;
 }
-.right-menu-block{
+.menu-item{
 display: flex;
 flex-direction: row;
 justify-content: center;
 align-self: center;
 }
-.menu-link {
+.menu-and-cup{
 display: flex;
+flex-direction: row;
+justify-content: center;
 align-items: center;
-gap: 8px;
-text-decoration: none;
+gap: 5px;
+}
+.menu-name-mobile{
+display: none;
 }
 .burger-button{
 display: none;
