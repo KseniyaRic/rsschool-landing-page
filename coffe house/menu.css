@@ -17,20 +17,6 @@ h1 span{
 font-style: italic;
 color: #B0907A;
 }
-.tab-button img{
-width: 16px;
-height: 24px;
-object-fit: contain;
-}
-.tab-icon-wrapper{
-display: flex;
-align-items: center;
-justify-content: center;
-width: 32px;
-height: 32px;
-background-color: #C1B6AD ;
-border-radius: 50px;
-}
 .tabs {
 display: flex;
 justify-content: center;
@@ -38,7 +24,7 @@ align-items: center;
 gap: 16px;
 width: 100%;
 }
-.tab-button {
+.tab-icon-wrapper {
 display: inline-flex;
 align-items: center;
 justify-content: space-between;
@@ -51,9 +37,20 @@ cursor: pointer;
 margin: 0;
 text-decoration: none;
 }
-.activation-on{
-background-color: #665F55;
-border-color: #665F55;
+.tab-button img{
+width: 16px;
+height: 24px;
+object-fit: contain;
+
+}
+.tab-icon-wrapper{
+display: flex;
+align-items: center;
+justify-content: center;
+width: 32px;
+height: 32px;
+background-color: #C1B6AD ;
+border-radius: 50px;
 }
 .tab-text{
 margin: 0;
@@ -106,6 +103,31 @@ font-weight: 600;
 h2{
 font-weight: 600;
 }
+/*.button-left,
+.button-right {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+z-index: 10;
+display: flex;
+justify-content: center;
+align-items: center;
+border: 1px solid #665F55;
+border-radius: 100px;
+background: transparent;
+width: 60px;
+height: 60px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+.button-left {left: 4px;}
+.button-right{right: 4px;}
+.button-right:hover,
+.button-left:hover {
+background-color: #665F55
+
+
+
 .refresh {
 display: flex;
 flex-direction: row;

@@ -101,25 +101,26 @@
         <section id="menu-hero-container">
             <h1>Behind each of our cups<br>
                 hides an <span>amazing surprise</span></h1>
-            <div class="tabs">
-                <a href="#" class="tab-button activation-on">
-                    <span class="tab-icon-wrapper coffe">
-                        <img src="em_coffee.svg" alt="coffee emoji">
-                    </span>
-                    <p class="tab-text">Coffee</p>
-                </a>
-                <a href="#" class="tab-button">
+            <div class="tabs" aria-label="menu-cathegory">
+                <button class="tab-button-coffee">
                     <span class="tab-icon-wrapper">
-                        <img src="teapot.svg" alt="tea emoji">
+                        <img src="em_coffee.svg" alt="">
                     </span>
-                    <p class="tab-text">Tea</p>
-                </a>
-                <a href="#" class="tab-button">
+                    <span class="tab-text">Coffee</span>
+                </button>
+                <button class="tab-button-tea">
                     <span class="tab-icon-wrapper">
-                        <img src="cake.svg" alt="dessert emoji">
+                        <img src="teapot.svg" alt="">
                     </span>
-                    <p class="tab-text">Dessert</p>
-                </a>
+                    <span class="tab-text">Tea</span>
+                </button>
+                <button class="tab-button-dessert">
+                    <span class="tab-icon-wrapper">
+                        <img src="cake.svg" alt="">
+                    </span>
+                    <span class="tab-text">Dessert</span>
+                </button>
+            </div>
             </div>
         </section>
         <div class="menu-section" id="menu">
@@ -127,13 +128,6 @@
                 <div class="products-grid coffee-grid" data-category="coffee"></div>
                 <div class="products-grid tea-grid" data-category="tea"></div>
                 <div class="products-grid dessert-grid" data-category="dessert"></div>
-
-
-
-
-
-
-
                 </article>
             </div>
             <div class="refresh">
