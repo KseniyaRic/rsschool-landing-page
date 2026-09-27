@@ -287,7 +287,7 @@ const products=[
   },
 
   {
-    "image": "tea-1.jpg",
+    "image": "tea-1.png",
     "name": "Moroccan",
     "description": "Fragrant black tea with the addition of tangerine, cinnamon, honey, lemon and mint",
     "price": "4.50",
@@ -323,7 +323,7 @@ const products=[
   },
 
   {
-    "image": "tea-2.jpg",
+    "image": "tea-2.png",
     "name": "Ginger",
     "description": "Original black tea with fresh ginger, lemon and honey",
     "price": "5.00",
@@ -359,7 +359,7 @@ const products=[
   },
 
   {
-    "image": "tea-3.jpg",
+    "image": "tea-3.png",
     "name": "Cranberry",
     "description": "Invigorating black tea with cranberry and honey",
     "price": "5.00",
@@ -395,7 +395,7 @@ const products=[
   },
 
   {
-    "image": "tea-4.jpg",
+    "image": "tea-4.png",
     "name": "Sea buckthorn",
     "description": "Toning sweet black tea with sea buckthorn, fresh thyme and cinnamon",
     "price": "5.50",
@@ -431,7 +431,7 @@ const products=[
   },
 
   {
-    "image": "dessert-1.jpg",
+    "image": "dessert-1.png",
     "name": "Marble cheesecake",
     "description": "Philadelphia cheese with lemon zest on a light sponge cake and red currant jam",
     "price": "3.50",
@@ -467,7 +467,7 @@ const products=[
   },
 
   {
-    "image": "dessert-2.jpg",
+    "image": "dessert-2.png",
     "name": "Red velvet",
     "description": "Layer cake with cream cheese frosting",
     "price": "4.00",
@@ -503,7 +503,7 @@ const products=[
   },
 
   {
-    "image": "dessert-3.jpg",
+    "image": "dessert-3.png",
     "name": "Cheesecakes",
     "description": "Soft cottage cheese pancakes with sour cream and fresh berries and sprinkled with powdered sugar",
     "price": "4.50",
@@ -539,7 +539,7 @@ const products=[
   },
 
   {
-    "image": "dessert-4.jpg",
+    "image": "dessert-4.png",
     "name": "Creme brulee",
     "description": "Delicate creamy dessert in a caramel basket with wild berries",
     "price": "4.00",
@@ -575,7 +575,7 @@ const products=[
   },
 
   {
-    "image": "dessert-5.jpg",
+    "image": "dessert-5.png",
     "name": "Pancakes",
     "description": "Tender pancakes with strawberry jam and fresh strawberries",
     "price": "4.50",
@@ -611,7 +611,7 @@ const products=[
   },
 
   {
-    "image": "dessert-6.jpg",
+    "image": "dessert-6.png",
     "name": "Honey cake",
     "description": "Classic honey cake with delicate custard",
     "price": "4.50",
@@ -647,7 +647,7 @@ const products=[
   },
 
   {
-    "image": "dessert-7.jpg",
+    "image": "dessert-7.png",
     "name": "Chocolate cake",
     "description": "Cake with hot chocolate filling and nuts with dried apricots",
     "price": "5.50",
@@ -683,7 +683,7 @@ const products=[
   },
 
   {
-    "image": "dessert-8.jpg",
+    "image": "dessert-8.png",
     "name": "Black forest",
     "description": "A combination of thin sponge cake with cherry jam and light chocolate mousse",
     "price": "6.50",
