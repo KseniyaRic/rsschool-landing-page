@@ -102,25 +102,24 @@
             <h1>Behind each of our cups<br>
                 hides an <span>amazing surprise</span></h1>
             <div class="tabs" aria-label="menu-cathegory">
-                <button class="tab-button-coffee">
+                <button class="tab is-active" data-category="coffee">
                     <span class="tab-icon-wrapper">
                         <img src="em_coffee.svg" alt="">
                     </span>
                     <span class="tab-text">Coffee</span>
                 </button>
-                <button class="tab-button-tea">
+                <button class="tab" data-category="tea">
                     <span class="tab-icon-wrapper">
                         <img src="teapot.svg" alt="">
                     </span>
                     <span class="tab-text">Tea</span>
                 </button>
-                <button class="tab-button-dessert">
+                <button class="tab" data-category="dessert">
                     <span class="tab-icon-wrapper">
                         <img src="cake.svg" alt="">
                     </span>
                     <span class="tab-text">Dessert</span>
                 </button>
-            </div>
             </div>
         </section>
         <div class="menu-section" id="menu">
@@ -128,10 +127,9 @@
                 <div class="products-grid coffee-grid" data-category="coffee"></div>
                 <div class="products-grid tea-grid" data-category="tea"></div>
                 <div class="products-grid dessert-grid" data-category="dessert"></div>
-                </article>
             </div>
             <div class="refresh">
-                <button id="load-more-btn" class="refresh-btn">
+                <button id="load-more-btn" class="refresh-btn is-hidden">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M21.8883 13.5C21.1645 18.3113 17.013 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C16.1006 2 19.6248 4.46819 21.1679 8"

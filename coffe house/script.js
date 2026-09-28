@@ -156,10 +156,162 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="product-info">
           <h2>${item.name}</h2>
           <p class="product-description">${item.description}</p>
-<span class="price">${Number(item.price).toFixed(2).replace('.', ',')}$</span>
+          <span class="price">$${Number(item.price).toFixed(2)}</span>
         </div>
       </article>
     `).join('');
   });
 
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const tabs  = document.querySelectorAll('.tab');           // ← кнопки, а не контейнер
+  const grids = document.querySelectorAll('.products-grid'); // ← гриды категорий
+
+  // Показать только грид выбранной категории
+  function filterByCategory(category) {
+    grids.forEach(grid => {
+      grid.classList.toggle('is-active', grid.dataset.category === category);
+    });
+  }
+
+  // Сделать активной ровно одну кнопку
+  function setActiveTab(activeTab) {
+    tabs.forEach(tab => {
+      tab.classList.toggle('is-active', tab === activeTab);
+    });
+  }
+
+  // --- ШАГ 1: инициализация при загрузке ---
+  const firstTab = tabs[0]; // первая категория (Coffee)
+  if (firstTab) {
+    setActiveTab(firstTab);
+    filterByCategory(firstTab.dataset.category);
+  }
+
+  // --- ШАГ 2: обработка кликов ---
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      setActiveTab(tab);
+      filterByCategory(tab.dataset.category);
+    });
+  });
+});
+
+/*КАТЕГОРИИ*/
+document.addEventListener('DOMContentLoaded', () => {
+  // ─────────────────────────────────────────────
+  // 1. РЕНДЕР КАРТОЧЕК (ваш существующий код)
+  // ─────────────────────────────────────────────
+  const grids = document.querySelectorAll('.products-grid');
+  if (!grids.length) return;
+
+  grids.forEach((grid) => {
+    const category = grid.dataset.category;
+    const items = products.filter((p) => p.category === category);
+
+    grid.innerHTML = items.map((item) => `
+      <article class="product-card" data-id="${item.id}">
+        <div class="product-picture">
+          <img src="${item.image}" alt="${item.name}">
+        </div>
+        <div class="product-info">
+          <div class="product-text">
+            <h2>${item.name}</h2>
+            <p class="product-description">${item.description}</p>
+          </div>
+          <span class="price">$${Number(item.price).toFixed(2)}</span>
+        </div>
+      </article>
+    `).join('');
+  });
+
+  // ─────────────────────────────────────────────
+  // 2. ЛОГИКА ЛИМИТА 4 КАРТОЧЕК НА МОБИЛЕ
+  // ─────────────────────────────────────────────
+  const MOBILE_LIMIT = 4;
+  const mq = window.matchMedia('(max-width: 768px)');
+
+  // Какие категории пользователь раскрыл нажатием кнопки
+  const expanded = new Set();
+
+  const loadMoreBtn = document.getElementById('load-more-btn');
+
+  // Текущая активная категория (берём из активного таба)
+  function getActiveCategory() {
+    return document.querySelector('.tab.is-active')?.dataset.category || null;
+  }
+
+  // Применить ограничение к активному гриду
+  function applyLimit() {
+    const category = getActiveCategory();
+    if (!category) return;
+
+    const grid = document.querySelector(`.products-grid[data-category="${category}"]`);
+    if (!grid) return;
+
+    const cards = grid.querySelectorAll('.product-card');
+
+    // Десктоп или категория раскрыта — показываем всё
+    if (!mq.matches || expanded.has(category)) {
+      cards.forEach(card => card.style.display = '');
+      loadMoreBtn.classList.add('is-hidden');
+      return;
+    }
+
+    // Мобила и НЕ раскрыта — первые 4
+    cards.forEach((card, i) => {
+      card.style.display = i < MOBILE_LIMIT ? '' : 'none';
+    });
+
+    // Кнопка — только если есть что показать
+    loadMoreBtn.classList.toggle('is-hidden', cards.length <= MOBILE_LIMIT);
+  }
+
+  // ─────────────────────────────────────────────
+  // 3. ПЕРЕКЛЮЧЕНИЕ КАТЕГОРИЙ
+  // ─────────────────────────────────────────────
+  document.querySelectorAll('.tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('is-active'));
+      tab.classList.add('is-active');
+
+      document.querySelectorAll('.products-grid').forEach(grid => {
+        grid.classList.toggle('is-active', grid.dataset.category === tab.dataset.category);
+      });
+
+      // При переходе на новую категорию — раскрытие сбрасываем
+      const category = tab.dataset.category;
+      expanded.delete(category);
+
+      applyLimit();
+    });
+  });
+
+  // ─────────────────────────────────────────────
+  // 4. КНОПКА «ПОКАЗАТЬ ЕЩЁ»
+  // ─────────────────────────────────────────────
+  loadMoreBtn.addEventListener('click', () => {
+    const category = getActiveCategory();
+    if (!category) return;
+    expanded.add(category);
+    applyLimit();
+  });
+
+  // ─────────────────────────────────────────────
+  // 5. РЕАКЦИЯ НА ПЕРЕХОД ЧЕРЕЗ 768px
+  // ─────────────────────────────────────────────
+  mq.addEventListener('change', (e) => {
+    if (e.matches) {
+      // перешли на мобилу — сбрасываем все раскрытия
+      expanded.clear();
+    }
+    applyLimit();
+  });
+
+  // ─────────────────────────────────────────────
+  // 6. СТАРТ
+  // ─────────────────────────────────────────────
+  applyLimit();
 });

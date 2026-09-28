@@ -1,5 +1,6 @@
 const products=[
   {
+    "id": "coffee-1",
     "image": "coffee-1.jpg",
     "name": "Irish coffee",
     "description": "Fragrant black coffee with Jameson Irish whiskey and whipped milk",
@@ -36,6 +37,7 @@ const products=[
   },
 
   {
+    "id": "coffee-2",
     "image": "coffee-2.jpg",
     "name": "Kahlua coffee",
     "description": "Classic coffee with milk and Kahlua liqueur under a cap of frothed milk",
@@ -71,7 +73,9 @@ const products=[
     ]
   },
 
-  { "image": "coffee-3.jpg",
+  {
+    "id": "coffee-3",
+    "image": "coffee-3.jpg",
     "name": "Honey raf",
     "description": "Espresso with frothed milk, cream and aromatic honey",
     "price": "5.50",
@@ -107,6 +111,7 @@ const products=[
   },
 
   {
+    "id": "coffee-4",
     "image": "coffee-4.jpg",
     "name": "Ice cappuccino",
     "description": "Cappuccino with soft thick foam in summer version with ice",
@@ -143,6 +148,7 @@ const products=[
   },
 
   {
+    "id": "coffee-5",
     "image": "coffee-5.jpg",
     "name": "Espresso",
     "description": "Classic black coffee",
@@ -179,6 +185,7 @@ const products=[
   },
 
   {
+    "id": "coffee-6",
     "image": "coffee-6.jpg",
     "name": "Latte",
     "description": "Espresso coffee with the addition of steamed milk and dense milk foam",
@@ -215,6 +222,7 @@ const products=[
   },
 
   {
+    "id": "coffee-7",
     "image": "coffee-7.jpg",
     "name": "Latte macchiato",
     "description": "Espresso with frothed milk and chocolate",
@@ -251,6 +259,7 @@ const products=[
   },
 
   {
+    "id": "coffee-8",
     "image": "coffee-8.jpg",
     "name": "Coffee with cognac",
     "description": "Fragrant black coffee with cognac and whipped cream",
@@ -287,6 +296,7 @@ const products=[
   },
 
   {
+    "id": "tea-1",
     "image": "tea-1.png",
     "name": "Moroccan",
     "description": "Fragrant black tea with the addition of tangerine, cinnamon, honey, lemon and mint",
@@ -323,6 +333,7 @@ const products=[
   },
 
   {
+    "id": "tea-2",
     "image": "tea-2.png",
     "name": "Ginger",
     "description": "Original black tea with fresh ginger, lemon and honey",
@@ -359,6 +370,7 @@ const products=[
   },
 
   {
+    "id": "tea-3",
     "image": "tea-3.png",
     "name": "Cranberry",
     "description": "Invigorating black tea with cranberry and honey",
@@ -395,6 +407,7 @@ const products=[
   },
 
   {
+    "id": "tea-4",
     "image": "tea-4.png",
     "name": "Sea buckthorn",
     "description": "Toning sweet black tea with sea buckthorn, fresh thyme and cinnamon",
@@ -431,6 +444,7 @@ const products=[
   },
 
   {
+    "id": "dessert-1",
     "image": "dessert-1.png",
     "name": "Marble cheesecake",
     "description": "Philadelphia cheese with lemon zest on a light sponge cake and red currant jam",
@@ -467,6 +481,7 @@ const products=[
   },
 
   {
+    "id": "dessert-2",
     "image": "dessert-2.png",
     "name": "Red velvet",
     "description": "Layer cake with cream cheese frosting",
@@ -503,6 +518,7 @@ const products=[
   },
 
   {
+    "id": "dessert-3",
     "image": "dessert-3.png",
     "name": "Cheesecakes",
     "description": "Soft cottage cheese pancakes with sour cream and fresh berries and sprinkled with powdered sugar",
@@ -539,6 +555,7 @@ const products=[
   },
 
   {
+    "id": "dessert-4",
     "image": "dessert-4.png",
     "name": "Creme brulee",
     "description": "Delicate creamy dessert in a caramel basket with wild berries",
@@ -575,6 +592,7 @@ const products=[
   },
 
   {
+    "id": "dessert-5",
     "image": "dessert-5.png",
     "name": "Pancakes",
     "description": "Tender pancakes with strawberry jam and fresh strawberries",
@@ -611,6 +629,7 @@ const products=[
   },
 
   {
+    "id": "dessert-6",
     "image": "dessert-6.png",
     "name": "Honey cake",
     "description": "Classic honey cake with delicate custard",
@@ -647,6 +666,7 @@ const products=[
   },
 
   {
+    "id": "dessert-7",
     "image": "dessert-7.png",
     "name": "Chocolate cake",
     "description": "Cake with hot chocolate filling and nuts with dried apricots",
@@ -683,6 +703,7 @@ const products=[
   },
 
   {
+    "id": "dessert-8",
     "image": "dessert-8.png",
     "name": "Black forest",
     "description": "A combination of thin sponge cake with cherry jam and light chocolate mousse",
