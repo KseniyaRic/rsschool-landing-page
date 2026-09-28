@@ -3,26 +3,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const burgerButton = document.querySelector('.burger-button');
   const mainNav = document.querySelector('.main-nav');
 
-  // защита: если элементов нет — выходим
   if (!burgerButton || !mainNav) return;
 
-  // ===== ЧТО ЗНАЧИТ «ОТКРЫТЬ» =====
   function openMenu() {
-    mainNav.classList.add('active');                  // пункт 1 и 3
-    burgerButton.classList.add('active');             // пункт 3 (крестик)
+    mainNav.classList.add('active');
+    burgerButton.classList.add('active');
     burgerButton.setAttribute('aria-expanded', 'true');
-    document.body.style.overflow = 'hidden';          // пункт 2 (блок прокрутки)
+    document.body.style.overflow = 'hidden';
   }
 
-  // ===== ЧТО ЗНАЧИТ «ЗАКРЫТЬ» =====
   function closeMenu() {
     mainNav.classList.remove('active');
     burgerButton.classList.remove('active');
     burgerButton.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';                // пункт 2 (снять блок)
+    document.body.style.overflow = '';
   }
-
-  // ===== КЛИК ПО БУРГЕРУ ===== (пункт 1)
   burgerButton.addEventListener('click', (e) => {
     e.stopPropagation();
     if (mainNav.classList.contains('active')) {
@@ -32,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // ===== КЛИК ВНЕ МЕНЮ И ВНЕ БУРГЕРА ===== (пункт 1, поведение)
   document.addEventListener('click', (e) => {
     const clickInsideMenu = mainNav.contains(e.target);
     const clickOnBurger = burgerButton.contains(e.target);
@@ -41,21 +35,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // ===== КЛАВИША ESCAPE ===== (пункт 4)
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && mainNav.classList.contains('active')) {
       closeMenu();
     }
   });
 
-  // ===== КЛИК ПО ССЫЛКЕ В МЕНЮ ===== (пункт 4)
   mainNav.querySelectorAll('.menu-link').forEach((link) => {
     link.addEventListener('click', () => {
       closeMenu();
     });
   });
 
-  // ===== РЕСАЙЗ ОКНА >768PX ===== (пункт 5)
   window.addEventListener('resize', () => {
     if (window.innerWidth > 768 && mainNav.classList.contains('active')) {
       closeMenu();
@@ -63,7 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
-/*СЛАЙДЕР*/
 document.addEventListener('DOMContentLoaded', () => {
     const track = document.querySelector('.slide-track');
     if (!track) return;
@@ -95,7 +85,6 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             currentIndex--;
         }
-          // ===== СВАЙП (для 380px и меньше) =====
   let startX = 0;
   let currentX = 0;
   let isSwiping = false;
@@ -104,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
     startX = e.touches[0].clientX;
     currentX = startX;
     isSwiping = true;
-    track.style.transition = 'none';   // выключаем плавность, пока тащим
+    track.style.transition = 'none';
   });
 
   track.addEventListener('touchmove', (e) => {
@@ -121,14 +110,14 @@ document.addEventListener('DOMContentLoaded', () => {
     track.style.transition = 'transform 0.3s ease';
 
     const diff = currentX - startX;
-    const threshold = track.offsetWidth * 0.2;   // 20% ширины — порог
+    const threshold = track.offsetWidth * 0.2;
 
     if (diff < -threshold) {
       goToNext();
     } else if (diff > threshold) {
       goToPrev();
     } else {
-      updateSlider();   // возвращаем на место
+      updateSlider();
     }
   });
         updateSlider();
@@ -142,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
 
   const grids = document.querySelectorAll('.products-grid');
-  if (!grids.length) return;   // на главной такого нет — выходим
+  if (!grids.length) return;
 
   grids.forEach((grid) => {
     const category = grid.dataset.category;
@@ -166,31 +155,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  const tabs  = document.querySelectorAll('.tab');           // ← кнопки, а не контейнер
-  const grids = document.querySelectorAll('.products-grid'); // ← гриды категорий
+  const tabs  = document.querySelectorAll('.tab');
+  const grids = document.querySelectorAll('.products-grid');
 
-  // Показать только грид выбранной категории
   function filterByCategory(category) {
     grids.forEach(grid => {
       grid.classList.toggle('is-active', grid.dataset.category === category);
     });
   }
 
-  // Сделать активной ровно одну кнопку
   function setActiveTab(activeTab) {
     tabs.forEach(tab => {
       tab.classList.toggle('is-active', tab === activeTab);
     });
   }
 
-  // --- ШАГ 1: инициализация при загрузке ---
-  const firstTab = tabs[0]; // первая категория (Coffee)
+  const firstTab = tabs[0];
   if (firstTab) {
     setActiveTab(firstTab);
     filterByCategory(firstTab.dataset.category);
   }
 
-  // --- ШАГ 2: обработка кликов ---
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
       setActiveTab(tab);
@@ -201,14 +186,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /*КАТЕГОРИИ*/
 document.addEventListener('DOMContentLoaded', () => {
-  // ─────────────────────────────────────────────
-  // 1. РЕНДЕР КАРТОЧЕК (ваш существующий код)
-  // ─────────────────────────────────────────────
   const grids = document.querySelectorAll('.products-grid');
   if (!grids.length) return;
 
   grids.forEach((grid) => {
-    const category = grid.dataset.category;
+      const category = grid.dataset.category;
     const items = products.filter((p) => p.category === category);
 
     grid.innerHTML = items.map((item) => `
@@ -227,23 +209,17 @@ document.addEventListener('DOMContentLoaded', () => {
     `).join('');
   });
 
-  // ─────────────────────────────────────────────
-  // 2. ЛОГИКА ЛИМИТА 4 КАРТОЧЕК НА МОБИЛЕ
-  // ─────────────────────────────────────────────
   const MOBILE_LIMIT = 4;
   const mq = window.matchMedia('(max-width: 768px)');
 
-  // Какие категории пользователь раскрыл нажатием кнопки
   const expanded = new Set();
 
   const loadMoreBtn = document.getElementById('load-more-btn');
 
-  // Текущая активная категория (берём из активного таба)
   function getActiveCategory() {
     return document.querySelector('.tab.is-active')?.dataset.category || null;
   }
 
-  // Применить ограничение к активному гриду
   function applyLimit() {
     const category = getActiveCategory();
     if (!category) return;
@@ -253,25 +229,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const cards = grid.querySelectorAll('.product-card');
 
-    // Десктоп или категория раскрыта — показываем всё
     if (!mq.matches || expanded.has(category)) {
       cards.forEach(card => card.style.display = '');
       loadMoreBtn.classList.add('is-hidden');
       return;
     }
 
-    // Мобила и НЕ раскрыта — первые 4
     cards.forEach((card, i) => {
       card.style.display = i < MOBILE_LIMIT ? '' : 'none';
     });
 
-    // Кнопка — только если есть что показать
     loadMoreBtn.classList.toggle('is-hidden', cards.length <= MOBILE_LIMIT);
   }
 
-  // ─────────────────────────────────────────────
-  // 3. ПЕРЕКЛЮЧЕНИЕ КАТЕГОРИЙ
-  // ─────────────────────────────────────────────
   document.querySelectorAll('.tab').forEach(tab => {
     tab.addEventListener('click', () => {
       document.querySelectorAll('.tab').forEach(t => t.classList.remove('is-active'));
@@ -281,7 +251,6 @@ document.addEventListener('DOMContentLoaded', () => {
         grid.classList.toggle('is-active', grid.dataset.category === tab.dataset.category);
       });
 
-      // При переходе на новую категорию — раскрытие сбрасываем
       const category = tab.dataset.category;
       expanded.delete(category);
 
@@ -289,9 +258,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ─────────────────────────────────────────────
-  // 4. КНОПКА «ПОКАЗАТЬ ЕЩЁ»
-  // ─────────────────────────────────────────────
   loadMoreBtn.addEventListener('click', () => {
     const category = getActiveCategory();
     if (!category) return;
@@ -299,19 +265,104 @@ document.addEventListener('DOMContentLoaded', () => {
     applyLimit();
   });
 
-  // ─────────────────────────────────────────────
-  // 5. РЕАКЦИЯ НА ПЕРЕХОД ЧЕРЕЗ 768px
-  // ─────────────────────────────────────────────
   mq.addEventListener('change', (e) => {
     if (e.matches) {
-      // перешли на мобилу — сбрасываем все раскрытия
       expanded.clear();
     }
     applyLimit();
   });
 
-  // ─────────────────────────────────────────────
-  // 6. СТАРТ
-  // ─────────────────────────────────────────────
   applyLimit();
+});
+
+/* МОДАЛЬНОЕ ОКНО */
+document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.getElementById('product-modal');
+  if (!modal) return;
+
+  const modalWindow = document.getElementById('modal-window');
+
+  function openModal(item) {
+    modalWindow.innerHTML = `
+       <div class="product-picture">
+          <img src="${item.image}" alt="${item.name}">
+        </div>
+      <div class="modal-info">
+        <h2>${item.name}</h2>
+        <p class="modal-description">${item.description}</p>
+
+        <div class="modal-group">
+          <p class="modal-label">Size</p>
+          <div class="modal-buttons">
+            ${Object.entries(item.sizes).map(([key, s], i) => `
+              <button class="size-btn ${i === 0 ? 'is-active' : ''}"
+                      type="button"
+                      data-add="${s['add-price']}">
+                ${key.toUpperCase()} ${s.size}
+              </button>
+            `).join('')}
+          </div>
+        </div>
+
+        <div class="modal-group">
+          <p class="modal-label">Additives</p>
+          <div class="modal-buttons">
+            ${item.additives.map((a, i) => `
+              <button class="additive-btn"
+                      type="button"
+                      data-add="${a['add-price']}">
+                ${i + 1} ${a.name}
+              </button>
+            `).join('')}
+          </div>
+        </div>
+
+        <div class="modal-total">
+          <span>Total:</span>
+          <span class="modal-price">$${Number(item.price).toFixed(2)}</span>
+        </div>
+
+        <button class="modal-close-btn" type="button" data-close>Close</button>
+      </div>
+    `;
+
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modal.hidden = true;
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.products-grid').forEach(grid => {
+    grid.addEventListener('click', e => {
+      const card = e.target.closest('.product-card');
+      if (!card) return;
+
+      const item = products.find(p => String(p.id) === card.dataset.id);
+      if (item) openModal(item);
+    });
+  });
+
+  modal.addEventListener('click', e => {
+    if (e.target.closest('[data-close]')) {
+      closeModal();
+      return;
+    }
+
+    const sizeBtn = e.target.closest('.size-btn');
+    if (sizeBtn) {
+      modal.querySelectorAll('.size-btn').forEach(b => b.classList.remove('is-active'));
+      sizeBtn.classList.add('is-active');
+      return;
+    }
+
+    const addBtn = e.target.closest('.additive-btn');
+    if (addBtn) addBtn.classList.toggle('is-active');
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && !modal.hidden) closeModal();
+  });
 });
