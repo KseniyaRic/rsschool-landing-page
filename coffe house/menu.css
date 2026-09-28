@@ -185,6 +185,17 @@ gap:12px
   cursor: pointer;
   transition: background .2s, color .2s, border-color .2s;
 }
+.size-btn:hover,
+.additive-btn:hover {
+  border-color: #665F55;
+}
+
+.size-btn.is-active,
+.additive-btn.is-active {
+  background: #665F55;
+  border-color: #665F55;
+  color: #E1D4C9;
+}
 
 
 @media (max-width:768px) {
